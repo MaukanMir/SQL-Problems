@@ -1,5 +1,5 @@
 
-MediumTwitchActive Interview QuestionsID 2010
+Medium Twitch Active Interview Questions ID 2010
 Interview Question Date: Dec 2020
 Top Streamers
 List the top 10 users who accumulated the most sessions where they had more streaming sessions than viewing. Return the user_id, number of streaming sessions, and number of viewing sessions.
