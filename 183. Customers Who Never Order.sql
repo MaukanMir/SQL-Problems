@@ -40,3 +40,12 @@ Memory Usage: 0B, less than 100.00% of MySQL online submissions for Customers Wh
 SELECT name as 'Customers' from Customers as C
  left join Orders as O on C.id = O.customerid
 where o.customerid IS NULL
+
+
+Success
+Details 
+Runtime: 490 ms, faster than 40.28% of MySQL online submissions for Customers Who Never Order.
+Memory Usage: 0B, less than 100.00% of MySQL online submissions for Customers Who Never Order.
+
+SELECT  name as 'Customers' from Customers 
+where customers.id not in(select customerid from Orders)
