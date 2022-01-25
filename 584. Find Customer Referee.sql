@@ -52,3 +52,13 @@ Memory Usage: 0B, less than 100.00% of MySQL online submissions for Find Custome
 Select name from Customer
 where referee_id != 2 or referee_id is Null
 
+
+
+Success
+Details 
+Runtime: 470 ms, faster than 52.20% of MySQL online submissions for Find Customer Referee.
+Memory Usage: 0B, less than 100.00% of MySQL online submissions for Find Customer Referee.
+
+
+Select name from Customer
+where referee_id not in (select referee_id where referee_id = 2)
