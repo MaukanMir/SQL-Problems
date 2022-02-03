@@ -1,0 +1,7 @@
+Easy City of San Francisco General Practice ID 9925
+Find how many people registered in libraries in the year 2016
+Find how many people registered in libraries in the year 2016.
+Output the total patrons.
+
+select count(*) from library_usage
+where year_patron_registered = 2016
