@@ -11,3 +11,10 @@ where price between 5 and 20
 
 select distinct variety from winemag_p1
 where price in (select price from winemag_p1 where price between 5 and 20)
+
+
+with cte as (
+select distinct variety from winemag_p1
+where price between 5 and 20)
+
+select * from cte
