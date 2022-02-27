@@ -11,3 +11,11 @@ where rnk <=3
 select distinct salary from worker 
 order by salary desc
 limit 3
+
+
+with found as (
+select distinct salary from worker)
+
+select salary from found
+order by salary desc
+limit 3
