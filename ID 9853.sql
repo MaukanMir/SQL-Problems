@@ -14,3 +14,5 @@ select *, dense_rank() over(order by salary desc)as rnk from worker)
 
 select worker_id, first_name, last_name, salary, joining_date, department from cte
 where rnk <=10
+
+
