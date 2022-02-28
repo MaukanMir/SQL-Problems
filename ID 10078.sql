@@ -7,3 +7,11 @@ Output the host id and the guest id of matched pair.
 select distinct host_id, guest_id from airbnb_hosts as ah
 inner join airbnb_guests as ag on ag.nationality = ah.nationality 
 where ag.nationality = ah.nationality and ag.gender = ah.gender
+
+
+
+ with cte as(select distinct host_id, guest_id from airbnb_hosts as ah
+inner join airbnb_guests as ag on ag.nationality = ah.nationality 
+where ag.nationality = ah.nationality and ag.gender = ah.gender)
+
+select * from cte
