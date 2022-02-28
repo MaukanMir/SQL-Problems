@@ -6,3 +6,9 @@ Find the number of speakers of each language by country. Output the country, lan
 select location,language, count(distinct pu.user_id) from playbook_events as pe
 join playbook_users as pu on pu.user_id = pe.user_id
 group by location, language
+
+
+with cte as (select location,language, count(distinct pu.user_id) from playbook_events as pe
+join playbook_users as pu on pu.user_id = pe.user_id
+group by location, language)
+select * from cte
