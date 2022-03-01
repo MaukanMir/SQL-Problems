@@ -5,3 +5,10 @@ Find the number of customers without an order.
 select count( c.id) from orders as o
  join customers as c on c.id = o.id
  where c.id not in (select cust_id from orders)
+
+
+
+with cte as (select count( c.id) from orders as o
+ join customers as c on c.id = o.id
+ where c.id not in (select cust_id from orders))
+ select * from cte
